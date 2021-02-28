@@ -3,9 +3,7 @@ import { useEffect } from 'react'
 import anime from '../anime.js'
 
 function Homepage() {
-    const text = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum ex voluptatibus consequatur assumenda sequi     saepe ut eius earum minus deserunt expedita temporibus laboriosam delectus ipsa ducimus, necessitatibus veritatis animi quod.
-        Asperiores amet similique molestias est, repellendus accusamus, quibusdam illo sed voluptate voluptates delectus explicabo, ipsum eius. Excepturi enim consequuntur labore magni ea cupiditate aperiam, quis fugiat amet unde ut facilis?
-        A voluptate doloremque consequuntur commodi odit fugiat, rem vel soluta ipsa eius nihil! Fugiat nesciunt fuga perferendis repudiandae error, quae odio, dolorum id suscipit soluta accusantium adipisci quis dolorem accusamus?`
+    const text = ` "People who succeed have momentum. The more they succeed, the more they want to succeed and the more they find a way to succeed. Similarly, when someone is failing, the tendency is to get on a downward spiral that can even become a self-fulfilling prophecy." -Tony Robbins`
     useEffect(() => {
         const textDiv = document.querySelector('#text')
         textDiv.innerHTML = textDiv.textContent.replace(/\S/g,'<span>$&</span>')
@@ -30,11 +28,14 @@ function Homepage() {
         })
     }, [])
     return (
-        <div className='homepage'>
-            <div className="text" id='text'>
-                {text}
+        <>
+            <div className='homepage'>
+                <div className="text" id='text'>
+                    {text}
+                </div>
             </div>
-        </div>
+            <div className='author'>@Rootrsk</div>
+        </>
     )
 }
 
